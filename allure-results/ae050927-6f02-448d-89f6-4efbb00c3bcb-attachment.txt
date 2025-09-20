@@ -1,0 +1,39 @@
+Navigation into the expected URL failed: page.waitForURL: Timeout 10000ms exceeded.
+=========================== logs ===========================
+waiting for navigation until "load"
+============================================================
+    at LoginFunctionality.verifyingUrl (C:\Users\manja\OneDrive\Documents\Playwright practice\tests\pages\LoginPage.js:31:25)
+    at C:\Users\manja\OneDrive\Documents\Playwright practice\tests\OrangeHRm.spec.js:29:30 {
+  name: 'TimeoutError',
+  [Symbol(step)]: {
+    stepId: 'pw:api@13',
+    location: {
+      file: 'C:\\Users\\manja\\OneDrive\\Documents\\Playwright practice\\tests\\pages\\LoginPage.js',
+      line: 31,
+      column: 25,
+      function: 'LoginFunctionality.verifyingUrl'
+    },
+    category: 'pw:api',
+    title: 'page.waitForURL',
+    apiName: 'page.waitForURL',
+    params: { info: [Object] },
+    boxedStack: undefined,
+    steps: [],
+    attachmentIndices: [],
+    complete: [Function: complete],
+    endWallTime: 1749864870029,
+    error: {
+      message: 'TimeoutError: page.waitForURL: Timeout 10000ms exceeded.\n' +
+        '=========================== logs ===========================\n' +
+        'waiting for navigation until "load"\n' +
+        '============================================================',
+      stack: 'TimeoutError: page.waitForURL: Timeout 10000ms exceeded.\n' +
+        '=========================== logs ===========================\n' +
+        'waiting for navigation until "load"\n' +
+        '============================================================\n' +
+        '    at LoginFunctionality.verifyingUrl (C:\\Users\\manja\\OneDrive\\Documents\\Playwright practice\\tests\\pages\\LoginPage.js:31:25)\n' +
+        '    at C:\\Users\\manja\\OneDrive\\Documents\\Playwright practice\\tests\\OrangeHRm.spec.js:29:30',
+      cause: undefined
+    }
+  }
+}

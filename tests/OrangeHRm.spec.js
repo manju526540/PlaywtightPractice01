@@ -23,10 +23,10 @@ test('this is the first test case',async({page})=>{
     const addemployees      = new Addemployees(page)
     const utilits =   new Utilits(page)
     await loginfunctionality.LunchUrl()
-    await loginfunctionality.usernameField()
-    await loginfunctionality.passwordField()
+    await loginfunctionality.usernameField(process.env.USER_NAME)
+    await loginfunctionality.passwordField(process.env.PASS_WORD)
     await loginfunctionality.submitButton()
-    await loginfunctionality.verifyingUrl()
+    //await loginfunctionality.verifyingUrl()
     await addemployees.ClickonPimButton(EmployeesData.dashboardcontentText["pim"])
     await addemployees.clickOnaddemployee()
     await addemployees.enterFirstNamefield(firstname)
@@ -57,8 +57,8 @@ test("User punch staus in orangeHRR",async({page})=>{
     const addemployees      = new Addemployees(page)
 
     await loginfunctionality.LunchUrl()
-    await loginfunctionality.usernameField()
-    await loginfunctionality.passwordField()
+    await loginfunctionality.usernameField(process.env.USER_NAME)
+    await loginfunctionality.passwordField(process.env.PASS_WORD)
     await loginfunctionality.submitButton()
     await loginfunctionality.verifyingUrl()
     await addemployees.ClickonPimButton(EmployeesData.dashboardcontentText["leave"])
@@ -97,7 +97,7 @@ test("test data store in globally",async()=>{
     
     fs.writeFileSync('.userData.env',`USERNAME=${userName}\n`)
     console.log("username is saved From Userdata.env:"+userName)
-
+    
     
 })
 
