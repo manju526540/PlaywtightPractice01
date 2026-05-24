@@ -14,12 +14,12 @@ export class LoginFunctionality{
         await this.page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
     }
 
-    async usernameField(){
-        await this.page.locator(this.username).fill("admin")
+    async usernameField(UserName){
+        await this.page.locator(this.username).fill(UserName)
     }
 
-    async passwordField(){
-        await this.page.locator(this.password).fill("admin123")
+    async passwordField(PassWord){
+        await this.page.locator(this.password).fill(PassWord)
     }
 
     async submitButton(){
@@ -28,7 +28,7 @@ export class LoginFunctionality{
 
     async verifyingUrl(){
         try{
-        await this.page.waitForURL(/.*\/dashboard\/index/,{timeout:10000})  
+        await this.page.waitForURL(/.*\/dashboard\/index/,{waitUntil: 'networkidle'})  
         const currentUrl = this.page.url()
         expect(currentUrl).toContain('/dashboard/index')
         }catch(error){

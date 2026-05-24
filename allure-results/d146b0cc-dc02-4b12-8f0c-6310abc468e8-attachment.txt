@@ -1,0 +1,18 @@
+{
+  EligibilityRoute: {
+    E1: 'E1 Nursing Assistant – State Approved Training Program',
+    E2: 'E2 NURSING ASSISTANT - SPONSOR — Trained at state approved long term care facility',
+    E3: 'E3 Nursing Student or Graduate',
+    M1: 'M1 State Approved Training Program Graduate'
+  },
+  SectionNames: {
+    Section2: 'Accommodations',
+    Section3: 'Registrant Certification',
+    Section4: 'Testing Preference'
+  },
+  TrainingProgramNamr: 'Automation_AL_Tp25'
+}
+685334614
+6087654467
+ElnoraJadenOberbrunner@credentiateam.testinator.com
+2021 MAR 14

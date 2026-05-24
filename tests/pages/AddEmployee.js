@@ -22,15 +22,15 @@ export class Addemployees{
     }
 
     async enterFirstNamefield(firstname){
-        await this.page.getByPlaceholder(this.firstName).fill(firstname)
+        await this.page.getByPlaceholder(this.firstName,{exact:true}).fill(firstname)
     }
 
     async enterMiddleName(middlename){
-        await this.page.getByPlaceholder(this.middleName).fill(middlename)
+        await this.page.getByPlaceholder(this.middleName,{exact:true}).fill(middlename)
     }
 
     async enterLastname(lastname){
-        await this.page.getByPlaceholder(this.lastName).fill(lastname)
+        await this.page.getByPlaceholder(this.lastName,{exact:true}).fill(lastname)
     }
 
     async enteremployeeID(employeeid){

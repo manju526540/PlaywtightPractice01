@@ -1,0 +1,2 @@
+Product links count: JSHandle@node,JSHandle@node,JSHandle@node,JSHandle@node,JSHandle@node,JSHandle@node,JSHandle@node,JSHandle@node,JSHandle@node,JSHandle@node,JSHandle@node,JSHandle@node,JSHandle@node,JSHandle@node,JSHandle@node,JSHandle@node,JSHandle@node,JSHandle@node,JSHandle@node,JSHandle@node,JSHandle@node,JSHandle@node
+total number of product links are : 22

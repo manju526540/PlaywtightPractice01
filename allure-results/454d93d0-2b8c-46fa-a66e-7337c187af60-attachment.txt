@@ -1,0 +1,13 @@
+total number of dropdowns: 10
+[
+  'book shelf wooden',
+  'book self',
+  'books bestsellers english',
+  'books for kids 9-12 years',
+  'bookmark',
+  'book organizer',
+  'bookshelf for home',
+  'book light',
+  'books for 2 + year old',
+  'books for 2 year old'
+]
