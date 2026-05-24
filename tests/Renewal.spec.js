@@ -91,4 +91,14 @@ test("User punch staus in orangeHRR",async({page})=>{
     await addemployees.ClickonPimButton(EmployeesData.dashboardcontentText["leave"])
 
 })
+test("handling the Screenshots for the specific element in playwright with js",async({ page })=>{
+
+    await page.goto('https://www.flipkart.com/')
+    await page.locator('div[aria-label="Fashion"]').hover()
+    await page.getByRole('link',{ name : "Men's T-Shirts"}).click()
+    await page.waitForEvent('load');
+    //await page.screenshot({ path : `tests/screenshots/flipkart_Tshirts${Date.now()}.png`,fullPage:true});
+    const SpoylerElement = page.locator('[class="lI2T1h WPXNND dwCDzl"]')
+    await SpoylerElement.screenshot({ path : 'tests/screenshots/'+Date.now()+'flipkart_tshirts_screenshot.png'})
+})
 })
