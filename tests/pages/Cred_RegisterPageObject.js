@@ -77,7 +77,15 @@ async enterPhoneNumberField(PhoneNumber){
     //await this.page.getByRole('textbox',{name:'Phone number'}).fill(PhoneNumber)
 }
 async enterEmailField(Email){
-    await this.page.getByRole('textbox',{name:'Email'}).fill(Email)
+    await this.page.locator('input[formcontrolname="_email"]').fill(Email)
+}
+
+async enterConfirmEmailId(Email){
+    await this.page.locator('input[formcontrolname="confirmEmail"]').fill(Email)
+}
+
+async selectPrimaryLanguage(){
+    await this.page.locator("")
 }
 
 async enterpasswordField(Password){
@@ -100,7 +108,7 @@ async clickOnSignUpbutton(){
    await this.page.getByRole('button',{name:'Sign Up'}).click()
    const VerifyTextcontent = await this.page.getByText('Verify your email',{exact:true})
    await VerifyTextcontent.waitFor({state:'visible'})
-   await this.page.waitForTimeout(10000)
+   //await this.page.waitForTimeout(10000)
       
 }
 }

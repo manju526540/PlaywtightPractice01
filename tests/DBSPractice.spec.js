@@ -34,8 +34,13 @@ test.describe('DBS practice test cases',()=>{
         await ScrollowingView.screenshot({ path:'tests/screenshots/'+Date.now()+'demoblaze_screenshot.png',fullPage: true})
     })
 
-    test("handaling the multiple tabs without clicking target attrubite",async({ browser })=>{
+    test.only("Handling the Sauce demo application in playwright with js",async({ page })=>{
          
+         await page.goto('https://www.amazon.in/')
+         await page.locator("//a[text()='Mobiles']").click()
+         const favoriteSmartPhone = page.getByAltText('1')
+         await expect(favoriteSmartPhone).toBeVisible()
+
             
     })
 })

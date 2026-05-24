@@ -1,0 +1,17 @@
+{
+    "SubmitApplicationData":{
+         
+        "ButtonNames":{
+                
+                "YesRadioButton": "yes",
+                "NoRadioButton": "no",
+                "RTSradioButton": "RTS (Regional Testing Center)",
+                "INFradioButton": "INF (In-facility)"
+            },
+        
+        "ValidationMessages":{
+            "SuccessfulResponseMessage": "Successfully Response Saved."
+        }
+ 
+}
+}

@@ -1,0 +1,2 @@
+[ '150', '180', '48', '480' ]
+Total value of the table is : 858

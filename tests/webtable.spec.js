@@ -6,6 +6,7 @@ test.describe("Handling the Webtable using letcode website",async()=>{
 
         await page.goto("https://letcode.in/table", { waitUntil: 'networkidle' })
         const tableValueText = await page.locator('#shopping tbody tr td:nth-child(2)').allTextContents();
+        console.log(tableValueText);
        const totalvalue =  tableValueText.reduce((acc,value)=> acc+Number(value),0)
        console.log("Total value of the table is : " + totalvalue);
 

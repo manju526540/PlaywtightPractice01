@@ -1,7 +1,76 @@
 {
     "state":{
-       "AL":"Alabama",
-       "DC":"District of Columbia"
+       "StateNames":{
+            "AL": "Alabama",
+            "DC": "District of Columbia"
+       },
+       
+       "AL":{
+             
+             "EligibilityRoute":{
+                "E1": "E1 Nursing Assistant – State Approved Training Program",
+                "E2": "E2 NURSING ASSISTANT - SPONSOR — Trained at state approved long term care facility",
+                "E3": "E3 Nursing Student or Graduate",
+                "M1": "M1 State Approved Training Program Graduate"
+            },
+
+             "SectionNames":{
+                "E1":{
+                "Section2": "Accommodations",
+                "Section3": "Registrant Certification",
+                "Section4": "Testing Preference"
+             },
+               "E2":{
+                  "Section2": "Accommodations",
+                "Section3": "Registrant Certification",
+                "Section4": "Testing Preference"
+            },
+               "E3":{
+                "Section2": "Accommodations",
+                "Section3": "Registrant Certification",
+                "Section4": "Testing Preference"
+               }
+         },
+
+             "ButtonNames":{
+                "YesRadioButton": "yes",
+                "NoRadioButton": "no",
+                "RTSradioButton": "RTS (Regional Testing Center)",
+                "INFradioButton": "INF (In-facility)"
+             },
+
+             "TrainingProgramNamr":"Automation_AL_Tp25"
+       },
+
+       "DC":{
+            
+             "EligibilityRoute":{
+                "D1": "D1 - New Nursing Assistant",
+                "D2": "D2 – Student Nurse",
+                "D4": "D4 - RN or LPN Trained Outside of the United States",
+                "D5": "D5 - Expired Certificate LESS than 24 months"
+            },
+
+             "SectionNames":{
+                "D1":{
+                "Section2": "Accommodations",
+                "Section3": "Registrant Certification",
+                "Section4": "Testing Preference"
+             },
+               "E2":{
+                  "Section2": "Accommodations",
+                "Section3": "Registrant Certification",
+                "Section4": "Testing Preference"
+            },
+               "E3":{
+                "Section2": "Accommodations",
+                "Section3": "Registrant Certification",
+                "Section4": "Testing Preference"
+               }
+         }
+
+
+       }
     }
     
 }

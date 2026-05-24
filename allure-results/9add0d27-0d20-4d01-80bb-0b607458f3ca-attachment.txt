@@ -1,0 +1,1 @@
+text content of the username field is : ADMIN

@@ -1,0 +1,2 @@
+Deleted the row with salary : 12000
+Deleted the row with salary : 12000

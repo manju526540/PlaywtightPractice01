@@ -1,0 +1,1 @@
+total number of add to cart buttons are : 6

@@ -71,10 +71,39 @@ test.describe("Handle tghe Alerts in the application", () => {
        await page.locator("#confirmButton").click()
     })
 
+    test("Alert1",async({ page })=>{
+
+        await page.goto('https://demo.automationtesting.in/Alerts.html');
+        await page.getByRole('button',{ name : 'click the button to display an  alert box:'}).click();
+        page.on('dialog',async dialog => {
+            expect(dialog.type()).toBe('alert')
+            expect(dialog.message()).toBe('I am an alert box!')
+            await dialog.accept()
+        })
+    })
+
+        test("Confirm Box1",async({ page })=>{
+            await page.goto('https://demo.automationtesting.in/Alerts.html');
+            await page.getByRole('link',{ name : 'Alert with OK & Cancel',exact:true}).click();
+            page.on('dialog',async dialog => {
+                expect(dialog.type()).toBe('confirm')
+                expect(dialog.message()).toBe('Press a Button !')
+                await dialog.accept()
+            })
+            await page.getByRole('button',{ name : 'click the button to display a confirm box '}).click();
+            await page.waitForTimeout(3000)
+            const result = await page.locator('#demo').textContent()
+            await expect(page.locator('#demo')).toHaveText('You pressed OK');
+            await page.waitForTimeout(5000)
+        })
+
+        test("green kart demo websites")
+    })
+
     
 
 
    
 
 
-})
+

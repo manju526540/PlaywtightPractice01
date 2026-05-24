@@ -1,0 +1,11 @@
+Current Voucher Count : 0
+Current Voucher count is 0
+Added a voucher, updated count : 1
+Current Voucher count is 1
+Added a voucher, updated count : 2
+Current Voucher count is 2
+Added a voucher, updated count : 3
+Current Voucher count is 3
+Added a voucher, updated count : 4
+Current Voucher count is 4
+Added a voucher, updated count : 5

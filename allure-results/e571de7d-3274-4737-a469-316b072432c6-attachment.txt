@@ -1,0 +1,2 @@
+total number of add to cart buttons are : 6
+Iteam price with $ symbol : [object Promise]

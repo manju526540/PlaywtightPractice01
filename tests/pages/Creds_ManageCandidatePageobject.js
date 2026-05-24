@@ -1,3 +1,4 @@
+import { expect } from "@playwright/test";
 export class ManageCandidatePage{
     constructor(page){
         this.page   =  page 
@@ -5,7 +6,7 @@ export class ManageCandidatePage{
         this.searchField      = page.getByPlaceholder('Search',{exact:true})
         this.CheckStatusButton= page.getByRole('button',{ name : "Check Status"})
         this.YesButton        = page.getByRole('button',{ name : "Yes"})
-        this.UserGotConfirm   = page.locator("//p[normalize-space()=")
+        this.UserGotConfirm   = page.getByText('User Got Confirmed',{exact:true})
     }
 
     async ClickOnManageCandidateLink(){
@@ -27,6 +28,11 @@ export class ManageCandidatePage{
     async ClickOnYesButton(){
         await this.YesButton.click()
     }
+
+    async VerifyUserGotConfirm(){
+        await expect(this.UserGotConfirm).toBeVisible()
+    }
+        
 
 
 
