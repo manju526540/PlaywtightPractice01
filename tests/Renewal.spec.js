@@ -43,4 +43,52 @@ test.describe('DBS practice test cases',()=>{
 
             
     })
+
+    test('this is the first test case',async({page})=>{
+ 
+    const loginfunctionality = new LoginFunctionality(page)
+    const addemployees      = new Addemployees(page)
+    const utilits =   new Utilits(page)
+    await loginfunctionality.LunchUrl()
+    await loginfunctionality.usernameField(process.env.USER_NAME)
+    await loginfunctionality.passwordField(process.env.PASS_WORD)
+    await loginfunctionality.submitButton()
+    //await loginfunctionality.verifyingUrl()
+    await addemployees.ClickonPimButton(EmployeesData.dashboardcontentText["pim"])
+    await addemployees.clickOnaddemployee()
+    await addemployees.enterFirstNamefield(firstname)
+    await addemployees.enterMiddleName(middlename)
+    await addemployees.enterLastname(lastname)
+    const randomEmployeeId = await utilits.generateEmployeeId()
+    const ConvertString = String(randomEmployeeId)
+    console.log(ConvertString)
+    await addemployees.enteremployeeID(ConvertString)
+    await addemployees.clickOnSaveButton()
+   })
+
+test("Practice the playwright test cases",async({page})=>{
+
+    await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+    await page.getByPlaceholder("Username").fill("admin")
+    await page.getByPlaceholder("Password").fill("admin123")
+    await page.getByRole('button',{name:" Login "}).click()
+    const pageUrl = page.url()
+    //await page.waitForURL(/dashboard\/index/)
+    console.log('dashboard Url is:'+pageUrl)
+    await expect(page).toHaveURL(/dashboard\/index/)
+})
+
+test("User punch staus in orangeHRR",async({page})=>{
+
+    const loginfunctionality = new LoginFunctionality(page)
+    const addemployees      = new Addemployees(page)
+
+    await loginfunctionality.LunchUrl()
+    await loginfunctionality.usernameField(process.env.USER_NAME)
+    await loginfunctionality.passwordField(process.env.PASS_WORD)
+    await loginfunctionality.submitButton()
+    await loginfunctionality.verifyingUrl()
+    await addemployees.ClickonPimButton(EmployeesData.dashboardcontentText["leave"])
+
+})
 })
